@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -11,24 +12,24 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ualzem-2024' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ualzem-2024' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ualzem-2024' ), 'ualzem-2024', '<a href="https://ualzemprojetos.com/portfolio/">Ualzem Campos</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="site-footer container">
+	<div class="footer-content">
+		<?php
+		$args = array(
+			'theme_location' => 'main-menu',
+			'container' => 'nav',
+			'container_class' => 'footer-menu'
+		);
+		wp_nav_menu($args);
+		?>
+
+		<p class="copyright">All Rights Reserved. <?php echo get_bloginfo('nane') . " - " . date('Y'); ?></p>
+	</div>
+</footer>
+
 
 <?php wp_footer(); ?>
 
 </body>
+
 </html>

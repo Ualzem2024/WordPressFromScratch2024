@@ -12,6 +12,11 @@
  *
  * @package Ualzem_Theme_2024
  */
+?>
+<?php get_header(); ?>
+
+<h1>home page por enquanto</h1>
 
 
-echo 'INDEX PAGE';
+
+<?php get_footer(); ?>
