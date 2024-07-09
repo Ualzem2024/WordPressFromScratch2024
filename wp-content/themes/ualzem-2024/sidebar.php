@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The sidebar containing the main widget area
  *
@@ -6,12 +7,14 @@
  *
  * @package Ualzem_Theme_2024
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
-<aside id="secondary" class="widget-area">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+
+
+<aside class="sidebar">
+	<?php
+	if (is_active_sidebar('sidebar')) :
+		dynamic_sidebar('sidebar');
+	endif;
+	?>
+</aside>

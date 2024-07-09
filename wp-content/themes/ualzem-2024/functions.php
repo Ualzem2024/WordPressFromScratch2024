@@ -77,3 +77,28 @@ function ualzem_2024_setup()
 	add_theme_support('post-thumbnails');
 }
 add_action('after_setup_theme', 'ualzem_2024_setup');
+
+
+
+
+function ualzem_2024_widgets()
+{
+	register_sidebar(array(
+		'name' => 'Sidebar Ualzem',
+		'id' => 'sidebar',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3>',
+		'after_title' => '</h3>',
+	));
+}
+add_action('widgets_init', 'ualzem_2024_widgets');
+
+
+
+
+
+
+
+// Desable gutenberg:
+add_filter('use_block_editor_for_post', '__return_false', 10);
