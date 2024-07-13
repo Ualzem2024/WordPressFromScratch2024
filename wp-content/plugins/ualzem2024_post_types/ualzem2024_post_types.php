@@ -134,7 +134,7 @@ function ualzem2024_post_types_Instrutores()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type('Instrutores', $args);
+    register_post_type('instrutores', $args);
 }
 add_action('init', 'ualzem2024_post_types_Instrutores', 0);
 
@@ -208,6 +208,6 @@ function ualzem2024_post_types_Depoimentos()
         'publicly_queryable'    => true,
         'capability_type'       => 'page',
     );
-    register_post_type('Depoimentos', $args);
+    register_post_type('depoimentos', $args);
 }
 add_action('init', 'ualzem2024_post_types_Depoimentos', 0);

@@ -17,6 +17,14 @@
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
+
+
+// Links to the queries file:
+require get_template_directory() . '/inc/queries.php';
+
+
+
+
 function ualzem_2024_menus()
 {
 	register_nav_menus(array(
