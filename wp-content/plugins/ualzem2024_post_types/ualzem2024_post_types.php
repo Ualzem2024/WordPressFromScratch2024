@@ -2,7 +2,7 @@
 /*
 Plugin Name: Ualzem 2024 Custom Post Types
 Plugin URI: https://ualzemprojetos.com/portfolio/
-Description: Description of what your plugin does.
+Description: Create all Custom Post Types for this project.
 Version: 1.0
 Author: Ualzem Campos
 Author URI: https://ualzemprojetos.com/portfolio/
