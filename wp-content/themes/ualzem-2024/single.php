@@ -11,13 +11,19 @@
 ?>
 <?php get_header(); ?>
 
-<?php while (have_posts()) : the_post(); ?>
 
-	<h1><?php the_title(); ?></h1>
-	<?php the_content(); ?>
+<main class="container page section with-sidebar">
 
 
-<?php endwhile; ?>
+	<div class="page-content">
+		<?php get_template_part('template-parts/page', 'loop'); ?>
+	</div>
+
+
+	<?php get_sidebar(); ?>
+
+
+</main>
 
 
 

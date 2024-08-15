@@ -15,7 +15,7 @@
 ?>
 <?php get_header(); ?>
 
-<h1>home page por enquanto</h1>
+<h1>index</h1>
 
 
 
