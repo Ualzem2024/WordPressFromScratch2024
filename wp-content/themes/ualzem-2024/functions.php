@@ -47,6 +47,11 @@ function ualzem_2024_scripts()
 	// Slicknav Menu css:
 	wp_enqueue_style('slicknavcss', get_template_directory_uri() . '/css/slicknav.min.css', array(), '1.0.10');
 
+	// Lightbox Gallery css:
+	if (basename(get_page_template()) === 'gallery.php'): // só vai rodar esse css no arquivo gallery.php
+		wp_enqueue_style('lightboxcss', get_template_directory_uri() . '/css/lightbox.min.css', array(), '2.11.4');
+	endif;
+
 
 	// Main Stylesheet:                                     //vai rodar normalizedepois googlefont e só depois o style principal
 	wp_enqueue_style('style', get_stylesheet_uri(), array('normalize', 'googlefont'), '1.0.0');
@@ -61,6 +66,11 @@ function ualzem_2024_scripts()
 
 	/** slicknav JS: */
 	wp_enqueue_script('slicknavjs', get_template_directory_uri() . '/js/jquery.slicknav.min.js', array('jquery'), '1.0.10', true);
+
+	/** lightbox JS: */
+	if (basename(get_page_template()) === 'gallery.php'): // só vai rodar esse javascript no arquivo gallery.php
+		wp_enqueue_script('lightboxjs', get_template_directory_uri() . '/js/lightbox.min.js', array('jquery'), '2.11.4', true);
+	endif;
 
 
 	/** Meu javascript: */
